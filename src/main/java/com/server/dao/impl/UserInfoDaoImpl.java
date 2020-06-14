@@ -28,7 +28,7 @@ public class UserInfoDaoImpl extends PostgreSQLConfigImpl implements UserInfoDao
 	@Override
 	public void insertClients(ClientInfo objClientInfo)throws SQLException, DataAccessException {
 //		getPostgreSQLTemplate().
-		NamedParameterJdbcTemplate
+//		NamedParameterJdbcTemplate
 	}
 
 	@Override
