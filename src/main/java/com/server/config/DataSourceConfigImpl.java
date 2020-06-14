@@ -42,7 +42,7 @@ public class DataSourceConfigImpl implements DataSourceConfig{
         ds.setPassword(env.getProperty(JDBC_POSTGRESQL_PASSWORD));
         /* the connection pool will have 10 to 20 connections */
         ds.setInitialConnections(10);
-        ds.setMaxConnections(20);
+		/* ds.setMaxConnections(20); */
         /* use SSL connections without checking server certificate */
         ds.setSslfactory("org.postgresql.ssl.NonValidatingFactory");
         
