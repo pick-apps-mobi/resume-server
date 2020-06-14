@@ -11,7 +11,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.server.dao.UserInfoDao;
-import com.server.model.ClientInfo;
+import com.server.model.UserInfo;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -21,9 +21,9 @@ public class DaoTest {
     UserInfoDao userInfoDao;
 	
 	@Test
-	public void getClients() throws SQLException, DataAccessException, NoSuchMethodException, SecurityException {
-		List lst = userInfoDao.getClients();
-		ClientInfo lst1 = userInfoDao.getClientInfo(1);
+	public void getClients() throws SQLException, DataAccessException {
+		List lst = userInfoDao.getUserInfoAll();
+		UserInfo lst1 = userInfoDao.getUserInfo(1);
 //		lst = value -> (System.out.println(v);)
 		System.out.println(lst1);
 		System.out.println(lst);

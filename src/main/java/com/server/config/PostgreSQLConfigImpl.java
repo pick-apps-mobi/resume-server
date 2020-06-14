@@ -4,6 +4,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
 
+import com.server.dao.PostgreSQLConfig;
+
 @Repository("postgreSQLConfig")
 public class PostgreSQLConfigImpl implements PostgreSQLConfig {
 	

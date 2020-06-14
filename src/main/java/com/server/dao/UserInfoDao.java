@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
-import com.server.model.ClientInfo;
+import com.server.model.UserInfo;
 
 public interface UserInfoDao {
 
-	public List<ClientInfo> getClients()throws SQLException, DataAccessException;
-	public ClientInfo getClientInfo(int id)throws SQLException, DataAccessException;
-	public void insertClients(ClientInfo objClientInfo)throws SQLException, DataAccessException;
+	public List<UserInfo> getUserInfoAll()throws SQLException, DataAccessException;
+	public UserInfo getUserInfo(int id)throws SQLException, DataAccessException;
+	public void insertUserInfo(UserInfo objUserInfo)throws SQLException, DataAccessException;
 	
 	
 	

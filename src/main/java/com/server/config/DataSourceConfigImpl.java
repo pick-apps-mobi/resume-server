@@ -21,6 +21,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
+import com.server.dao.DataSourceConfig;
+
 @Configuration
 @PropertySource(value = {POSTGRESQL_DATATSOURCE_PROPERTIES})
 public class DataSourceConfigImpl implements DataSourceConfig{

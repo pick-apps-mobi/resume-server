@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.server.model.ClientInfoResponse;
+import com.server.model.UserInfoResponse;
 import com.server.service.UserInfoService;
+
+
+
 
 @RestController
 @RequestMapping("/appd/clntinfo")
@@ -17,14 +20,14 @@ public class UserInfoController {
 	@Autowired
     private UserInfoService userInfoService;
 	
-	@GetMapping(value = "/getAllClientInfo")
-    public ResponseEntity<ClientInfoResponse> getAllClientInfo() {
-        return userInfoService.getAllClientInfo();
+	@GetMapping(value = "/getUserInfoAll")
+    public ResponseEntity<UserInfoResponse> getAllUserInfo() {
+        return userInfoService.getUserInfoAll();
     }
 	
 	
-	@GetMapping(value = "/getClientInfo/{id}")
-    public ResponseEntity<ClientInfoResponse> getClientInfo(@PathVariable int id) {
-        return userInfoService.getClientInfo(id);
+	@GetMapping(value = "/getUserInfo/{id}")
+    public ResponseEntity<UserInfoResponse> getUserInfo(@PathVariable int id) {
+        return userInfoService.getUserInfo(id);
     }
 }
